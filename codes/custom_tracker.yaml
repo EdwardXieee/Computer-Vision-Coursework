@@ -1,0 +1,8 @@
+tracker_type: bytetrack # tracker type, ['botsort', 'bytetrack']
+track_high_thresh: 0.5 # threshold for the first association. Increasing this value might reduce false positives but could miss some valid detections. Lowering it might increase noise.
+track_low_thresh: 0.05 # threshold for the second association. Lowering this threshold might help in retaining more tracks but at the risk of increasing false track continuations.
+new_track_thresh: 0.5 # threshold for init new track if the detection does not match any tracks
+track_buffer: 30 # buffer to calculate the time when to remove tracks. Reducing this number might make the tracker less tolerant to occlusions, while increasing it could use more memory and processing power but improve tracking through longer occlusions.
+match_thresh: 0.85 # threshold for matching tracks. Increasing this value may result in a tighter match criterion, potentially reducing ID switches but possibly increasing fragmentations of tracks.
+# min_box_area: 10  # threshold for min box areas(for tracker evaluation, not used for now)
+# mot20: False  # for tracker evaluation(not used for now)
